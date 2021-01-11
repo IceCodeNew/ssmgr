@@ -20,7 +20,7 @@ RUN apk update; apk --no-progress --no-cache add \
     curl -sSLR4q --retry 5 --retry-delay 10 --retry-max-time 60 -o '/root/.bashrc' "https://raw.githubusercontent.com/IceCodeNew/myrc/${bashrc_latest_commit_hash}/.bashrc"; \
     unset -f curl; \
     eval 'curl() { /usr/bin/curl -LRq --retry 5 --retry-delay 10 --retry-max-time 60 "$@"; }'; \
-    curl -sS --compressed "https://github.com/IceCodeNew/rust-collection/releases/latest/download/ss-rust-linux-gnu-x64.tar.xz" | bsdtar -xf-; \
+    curl -sS --compressed "https://github.com/IceCodeNew/rust-collection/releases/latest/download/ss-rust-linux-gnu-x64.tar.xz" | bsdtar --no-xattrs -xf-; \
     rm './sslocal'; \
     rm './ssurl'; \
     chmod +x './ssmanager'; \
