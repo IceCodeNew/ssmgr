@@ -1,9 +1,9 @@
 FROM quay.io/icecodenew/node:lts-alpine3.12 AS ssmgr
 SHELL ["/bin/ash", "-eo", "pipefail", "-c"]
 # https://api.github.com/repos/IceCodeNew/myrc/commits?per_page=1&path=.bashrc
-ARG bashrc_latest_commit_hash='6f332268abdbb7ef6c264a84691127778e3c6ef2'
+ARG bashrc_latest_commit_hash=5099c0e08cb1712bde0c90e847b7ebedcb9088ce
 # https://api.github.com/repos/shadowsocks/shadowsocks-manager/commits?per_page=1
-ARG shadowsocks_manager_latest_commit_hash='b6ce218b3d087c6d91723901dc5762c2a672b6d0'
+ARG shadowsocks_manager_latest_commit_hash=48494a64d79f728c70df52ca34d81f14271e9202
 ENV TZ='Asia/Taipei' \
     DEFAULT_TZ='Asia/Taipei' \
     PKG_CONFIG=/usr/bin/pkgconf
